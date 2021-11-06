@@ -1,0 +1,6 @@
+projectKey=frontend-codigo_base
+serverUrl=https://sonar.compjunior.com.br
+serverVersion=8.5.1.38104
+dashboardUrl=https://sonar.compjunior.com.br/dashboard?id=frontend-codigo_base
+ceTaskId=AXkZwQ05rIgJkWeid42S
+ceTaskUrl=https://sonar.compjunior.com.br/api/ce/task?id=AXkZwQ05rIgJkWeid42S
