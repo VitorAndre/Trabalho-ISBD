@@ -22,13 +22,13 @@ export default {
         periodo: 'Semestral',
         nome: 'Plano 1',
         descricao: 'String',
-        preco: '2.50',
+        preco: '80.00',
       },
       {
         periodo: 'Anual',
         nome: 'Plano 2',
         descricao: 'String',
-        preco: '1.0',
+        preco: '60.00',
       }
     ]
   }),

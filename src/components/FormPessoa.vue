@@ -90,8 +90,48 @@
                 ></b-form-input>
             </b-form-group>
         </div>
+        <b-form-group v-slot="{ ariaDescribedby }">
+          <b-form-radio-group
+              id="isInstrutor"
+              v-model="isInstrutor"
+              :aria-describedby="ariaDescribedby"
+              name="Instrutor ou recepcionista"
+          >
+              <b-form-radio value="true">Instrutor</b-form-radio>
+              <b-form-radio>Recepcionista</b-form-radio>
+          </b-form-radio-group>
+        </b-form-group>
+        <div v-if="isInstrutor">
+          <b-form-group id="cref" label="Cref:" label-for="cref">
+              <b-form-input
+              id="cref"
+              v-model="form.cref"
+              placeholder="Digite o cref"
+              required
+              ></b-form-input>
+          </b-form-group>
+          <b-form-group id="especializacao" label="Especialização:" label-for="especializacao">
+              <b-form-input
+              id="especializacao"
+              v-model="form.especializacao"
+              placeholder="Digite a especialização"
+              required
+              ></b-form-input>
+          </b-form-group>
+        </div>
+        <div v-else>
+          <b-form-group id="tempoDigitacao" label="Tempo de digitação:" label-for="tempoDigitacao">
+              <b-form-input
+              id="tempoDigitacao"
+              v-model="form.tempoDigitacao"
+              placeholder="Digite o tempo de digitação"
+              required
+              ></b-form-input>
+          </b-form-group>
+        </div>
         <b-button type="submit" variant="primary">Submit</b-button>
-        <b-button type="reset" variant="danger">Reset</b-button>
+<!--         <b-button type="reset" variant="danger">Reset</b-button>
+ -->    
     </b-form>
     <b-card class="mt-3" header="Form Data Result">
       <pre class="m-0">{{ form }}</pre>
@@ -114,10 +154,14 @@
           dataAdmissao: '',
           periodoTrabalho: '',
           peso: '',
-          altura: ''
+          altura: '',
+          especializacao: '',
+          cref: '',
+          tempoDigitacao: ''
         },
         show: true,
-        isCliente: true
+        isCliente: true,
+        isInstrutor: true
       }
     },
     methods: {

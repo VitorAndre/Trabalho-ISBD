@@ -9,10 +9,10 @@
     data() {
       return {
         items: [
-          { Equipamento: 'Dickerson', Status: 'Macdonald' },
-          { Equipamento: 'Larsen', Status: 'Shaw' },
-          { Equipamento: 'Geneva', Status: 'Wilson' },
-          { Equipamento: 'Jami', Status: 'Carney' }
+          { Equipamento: 'Supino', Status: 'Bom' },
+          { Equipamento: 'Halteres', Status: 'Ruim' },
+          { Equipamento: 'Esteira', Status: 'Bom' },
+          { Equipamento: 'Bicicleta', Status: 'Bom' }
         ]
       }
     }

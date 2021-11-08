@@ -13,7 +13,7 @@
       {{plano.periodo}}
     </b-card-text>
 
-    <b-button href="#" variant="primary">{{plano.preco}}</b-button>
+    <b-button href="#" variant="primary">R${{plano.preco.split('.').join(',')}}</b-button>
   </b-card>
   </div>
 </template>

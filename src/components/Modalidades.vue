@@ -19,12 +19,12 @@ export default {
     show: false,
     modalidades: [
       {
-        nome: 'Modalidade 1',
-        descricao: 'String',
+        nome: 'Musculação',
+        descricao: 'Modalidade para ficar monstro',
       },
       {
-        nome: 'Modalidade 2',
-        descricao: 'String',
+        nome: 'Natação',
+        descricao: 'Modalidade para nadar',
       }
     ]
   }),
