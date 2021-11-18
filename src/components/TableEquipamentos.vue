@@ -10,7 +10,7 @@
       default
     >
       <template #cell(dataDeAquisicao)="data">
-        {{ formataData(data) }}
+        {{ formataData(data.item.dataDeAquisicao) }}
       </template>
       <template #cell(edit)="data">
         <span v-b-modal="String(data.item.serial)">
@@ -106,7 +106,7 @@ export default {
   },
   methods: {
     formataData(data){
-      return moment(data).format('DD/MM/YYYY')
+      return moment(data, 'YYYY-MM-DD').format('DD/MM/YYYY')
     },
     deleteEquipamento(serial) {
       alert(`Equipamento ${serial} vai ser excluido`)
