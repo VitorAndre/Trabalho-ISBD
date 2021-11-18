@@ -48,11 +48,30 @@
 import ModalExclusao from "@/components/ModalExclusao.vue";
 import ModalFormEquipamentos from "@/components/ModalFormEquipamentos.vue";
 import moment from 'moment';
+import { getEquipamentos } from '@/services/api/Equipamentos.js'
 
 export default {
   components: {
     ModalExclusao,
     ModalFormEquipamentos
+  },
+  beforeMount() {
+    getEquipamentos().then(res => {
+      this.items = res.data || [
+          { serial: '1', nome: 'Supino', status: 'Bom', dataDeAquisicao: '2021-11-16' },
+          { serial: '2', nome: 'Halteres', status: 'Ruim', dataDeAquisicao: '2020-11-16' },
+          { serial: '3', nome: 'Esteira', status: 'Bom', dataDeAquisicao: '2021-08-16' },
+          { serial: '4', nome: 'Bicicleta', status: 'Bom', dataDeAquisicao: '2021-04-16' }
+        ]
+    }).catch(err => {
+      console.log(err)
+      this.items = [
+          { serial: '1', nome: 'Supino', status: 'Bom', dataDeAquisicao: '2021-11-16' },
+          { serial: '2', nome: 'Halteres', status: 'Ruim', dataDeAquisicao: '2020-11-16' },
+          { serial: '3', nome: 'Esteira', status: 'Bom', dataDeAquisicao: '2021-08-16' },
+          { serial: '4', nome: 'Bicicleta', status: 'Bom', dataDeAquisicao: '2021-04-16' }
+        ]
+    })
   },
   data() {
     return {
@@ -82,16 +101,8 @@ export default {
           label: ""
         }
       ],
-      items: [
-          { serial: '1', nome: 'Supino', status: 'Bom', dataDeAquisicao: '2021-11-16' },
-          { serial: '2', nome: 'Halteres', status: 'Ruim', dataDeAquisicao: '2020-11-16' },
-          { serial: '3', nome: 'Esteira', status: 'Bom', dataDeAquisicao: '2021-08-16' },
-          { serial: '4', nome: 'Bicicleta', status: 'Bom', dataDeAquisicao: '2021-04-16' }
-        ]
+      items: []
     };
-  },
-  mounted() {
-
   },
   methods: {
     formataData(data){
