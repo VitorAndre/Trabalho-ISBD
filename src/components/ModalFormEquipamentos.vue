@@ -24,6 +24,7 @@
               v-model="form.serial"
               placeholder="Digite o serial"
               required
+              :readonly="isAdd ? false : true"
               ></b-form-input>
           </b-form-group>
           <b-form-group id="status" label="Status:" label-for="status">
@@ -39,14 +40,13 @@
           </b-form-group>
           <b-button type="submit" variant="primary">Enviar</b-button>
       </b-form>
-      <b-card class="mt-3" header="Form Data Result">
-        <pre class="m-0">{{ form }}</pre>
-      </b-card>
     </div>
   </b-modal>
 </template>
 
 <script>
+import { addEquipamento, editEquipamento } from '@/services/api/Equipamentos.js'
+
   export default {
     props: {
       item: {
@@ -65,17 +65,37 @@
           dataDeAquisicao: '',
         },
         show: true,
+        isAdd: false
       }
     },
     mounted() {
-      if (this.item)
+      if (this.item){
+        if (this.item.serial == 'add') {
+          this.isAdd = true
+          this.item.serial = ''
+        }
         this.form = this.item
+      }
     },
     methods: {
       onSubmit(event) {
         event.preventDefault()
-        alert(JSON.stringify(this.form))
+        if (this.isAdd) {
+          this.adiciona()
+        } else {
+          this.edita()
+        }
         this.$bvModal.hide(this.item.serial);
+      },
+      adiciona() {
+        addEquipamento(this.form).then(res=> {
+          if (res) {
+            window.location.reload()
+          }
+        }).catch()
+      },
+      edita() {
+        editEquipamento(this.form).then().catch()
       },     
       hide() {
         this.$emit("cancel");

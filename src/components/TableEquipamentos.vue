@@ -37,18 +37,22 @@
             :serial="String(data.item.serial)"
             :message="'Você tem certeza que deseja excluir esse equipamento?'"
             :tipo_modal="'warning'"
-            @ok="deleteEquipamento(data.item.serial)"
+            @ok="delEquip(data.item.serial)"
           />
         </span>
       </template>
     </b-table>
+    <span v-b-modal="String('add')">
+      <b-button>Adicionar</b-button>
+      <ModalFormEquipamentos :item="{serial: 'add'}"/>
+    </span>
   </div>
 </template>
 <script>
 import ModalExclusao from "@/components/ModalExclusao.vue";
 import ModalFormEquipamentos from "@/components/ModalFormEquipamentos.vue";
 import moment from 'moment';
-import { getEquipamentos } from '@/services/api/Equipamentos.js'
+import { getEquipamentos, deleteEquipamento } from '@/services/api/Equipamentos.js'
 
 export default {
   components: {
@@ -105,11 +109,15 @@ export default {
     };
   },
   methods: {
-    formataData(data){
+    formataData(data) {
       return moment(data, 'YYYY-MM-DD').format('DD/MM/YYYY')
     },
-    deleteEquipamento(serial) {
-      alert(`Equipamento ${serial} vai ser excluido`)
+    delEquip(serial) {
+      deleteEquipamento({serial}).then(res => {
+        console.log(res)
+      }).catch(err => {
+        console.log('Erro: ', err)
+      })
     },
   }
 };

@@ -3,15 +3,25 @@ import Api from "./Api";
 const getEquipamentos = () => {
   return Api().get("/equipamentos.php");
 };
+const addEquipamento = (form) => {
+  let formData = new FormData();
+        formData.append('nome', form.nome)
+        formData.append('status', form.status)
+        formData.append('serial', form.serial)
+        formData.append('dataDeAquisicao', form.dataDeAquisicao)
+  return Api().post("/equipamentos.php", formData);
+};
+const editEquipamento = (form) => {
+  let formData = new FormData();
+        formData.append('nome', form.nome)
+        formData.append('status', form.status)
+        formData.append('serial', form.serial)
+        formData.append('dataDeAquisicao', form.dataDeAquisicao)
+  return Api().post("/equipamentos.php", formData);
+};
+const deleteEquipamento = (serial) => {
+  return Api().delete("/equipamentos.php", JSON.stringify(serial));
+};
 
-export { getEquipamentos };
+export { getEquipamentos, addEquipamento, editEquipamento, deleteEquipamento };
 
-// Para usar:
-//     - Importar a funcao (import { ExemploGet } from '@/services/ExemploApi')
-//     - ExemploGet().then(res => {
-//         dados ficam em res.data
-//     }).catch(error => {
-//         console.error('descricao do erro', error)
-//         ou
-//         console.error('descricao do erro', error.response) se tiver mensagem de erro etc
-//     })
