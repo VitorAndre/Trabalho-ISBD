@@ -92,10 +92,14 @@ import { addEquipamento, editEquipamento } from '@/services/api/Equipamentos.js'
           if (res) {
             window.location.reload()
           }
-        }).catch()
+        }).catch(()=> {
+          alert('Ocorreu um erro. Verifique os dados e tente novamente')
+        })
       },
       edita() {
-        editEquipamento(this.form).then().catch()
+        editEquipamento(this.form).then().catch(()=> {
+          alert('Ocorreu um erro. Verifique os dados e tente novamente')
+        })
       },     
       hide() {
         this.$emit("cancel");

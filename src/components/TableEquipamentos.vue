@@ -113,10 +113,14 @@ export default {
       return moment(data, 'YYYY-MM-DD').format('DD/MM/YYYY')
     },
     delEquip(serial) {
-      deleteEquipamento({serial}).then(res => {
-        console.log(res)
+      deleteEquipamento(serial).then(res => {
+        if (res) {
+          alert('Equipamento deletado com sucesso!')
+          window.location.reload()
+        }
       }).catch(err => {
         console.log('Erro: ', err)
+        alert('Ocorreu um erro ao deletar equipamento')
       })
     },
   }
