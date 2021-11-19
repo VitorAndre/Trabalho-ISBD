@@ -3,7 +3,7 @@ import axios from "axios";
 
 //Caso ocorra algum erro no servidor (de teste ou de produção), o erro pode ser a falta da
 //url completa no lugar do /api
-const apiUrl = 'http://127.0.0.1:3000' ;
+const apiUrl = 'https://trabalho-isbd.herokuapp.com/' ;
 
 export default () => {
   // console.log("token", store.getters["auth/token"]);
