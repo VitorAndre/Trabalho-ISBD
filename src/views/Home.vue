@@ -5,11 +5,11 @@
     <img src="@/assets/academia.jpg" alt=""> -->
     <div class="conteudo">
       <TableEquipamentos />
-      <div class="d-flex justify-content-around">
+<!--       <div class="d-flex justify-content-around">
         <Cards />
       </div>
       <Modalidades />
-      <TablePessoas />
+      <TablePessoas /> -->
       <!-- <FormEquipamentos /> -->
     </div>
   </div>
@@ -18,20 +18,20 @@
 <script>
 // @ is an alias to /src
 //import NavBar from "@/components/NavBar.vue";
-import Cards from "@/components/Cards.vue";
 import TableEquipamentos from "@/components/TableEquipamentos.vue";
-import Modalidades from "@/components/Modalidades.vue";
-import TablePessoas from "@/components/TablePessoas.vue";
+// import Cards from "@/components/Cards.vue";
+// import Modalidades from "@/components/Modalidades.vue";
+// import TablePessoas from "@/components/TablePessoas.vue";
 //import FormEquipamentos from "@/components/FormEquipamentos.vue";
 
 export default {
   name: "Home",
   components: {
   //  NavBar,
-    Cards,
     TableEquipamentos,
-    Modalidades,
-    TablePessoas,
+    // Cards,
+    // Modalidades,
+    // TablePessoas,
     //FormEquipamentos
   },
   data: () => ({
