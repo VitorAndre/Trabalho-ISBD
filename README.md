@@ -4,9 +4,9 @@ https://vitorandre.github.io/Trabalho-ISBD/
 
 ## Integrantes do trabalho: 
 
-Caio Matheus Leite da Silva - <br/>
-Érick de Castro Silva - 
-Felipe de Oliveira Fernandes - felipe.fernandes4@estudante.ufla.br
-Jonathas Luis de Sousa - jonathas.sousa@estudante.ufla.br
-Marco Antônio Magalhães - 
-Vitor André de Oliveira Tenório - vitor.tenorio@estudante.ufla.br
+<br/>Caio Matheus Leite da Silva - 
+<br/>Érick de Castro Silva - 
+<br/>Felipe de Oliveira Fernandes - felipe.fernandes4@estudante.ufla.br
+<br/>Jonathas Luis de Sousa - jonathas.sousa@estudante.ufla.br
+<br/>Marco Antônio Magalhães - 
+<br/>Vitor André de Oliveira Tenório - vitor.tenorio@estudante.ufla.br
