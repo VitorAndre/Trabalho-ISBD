@@ -11,6 +11,15 @@
       <Modalidades />
       <TablePessoas /> -->
       <!-- <FormEquipamentos /> -->
+      <div class="container text-left">
+        <h3>Integrantes do trabalho: </h3>
+        Caio Matheus Leite da Silva -
+   <br/>Érick de Castro Silva -
+   <br/>Felipe de Oliveira Fernandes - felipe.fernandes4@estudante.ufla.br
+   <br/>Jonathas Luis de Sousa - jonathas.sousa@estudante.ufla.br
+   <br/>Marco Antônio Magalhães -
+   <br/>Vitor André de Oliveira Tenório - vitor.tenorio@estudante.ufla.br
+      </div>
     </div>
   </div>
 </template>
@@ -45,7 +54,7 @@ export default {
   h1 {
     font-family: 'EB Garamond', serif;
     color: azure;
-    padding: 2rem;
+    padding: 0.9rem;
     font-size: 4rem;
   }
 }
