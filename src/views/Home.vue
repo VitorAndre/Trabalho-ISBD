@@ -13,11 +13,11 @@
       <!-- <FormEquipamentos /> -->
       <div class="container text-left">
         <h3>Integrantes do trabalho: </h3>
-        Caio Matheus Leite da Silva -
-   <br/>Érick de Castro Silva -
+        Caio Matheus Leite da Silva - caio.silva4@estudante.ufla.br
+   <br/>Érick de Castro Silva - erick.silva@estudante.ufla.br
    <br/>Felipe de Oliveira Fernandes - felipe.fernandes4@estudante.ufla.br
    <br/>Jonathas Luis de Sousa - jonathas.sousa@estudante.ufla.br
-   <br/>Marco Antônio Magalhães -
+   <br/>Marco Antônio Magalhães - marco.magalhaes@estudante.ufla.br
    <br/>Vitor André de Oliveira Tenório - vitor.tenorio@estudante.ufla.br
       </div>
     </div>
