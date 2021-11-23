@@ -92,8 +92,9 @@ import { addEquipamento, editEquipamento } from '@/services/api/Equipamentos.js'
           if (res) {
             window.location.reload()
           }
-        }).catch(()=> {
-          alert('Ocorreu um erro. Verifique os dados e tente novamente')
+        }).catch((res)=> {
+          console.log(res.response)
+          alert(`Ocorreu um erro:\n ${res.response.data}. \nVerifique os dados e tente novamente.`)
         })
       },
       edita() {
